@@ -23,6 +23,9 @@
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 mx-auto my-5">
                 <h5 class="text-center">ACESSO RESTRITO</h5>
+                <? if($this->get('loginInvalido')): ?>
+                <div class="alert alert-danger my-3"><b>Negado!</b> Usuário ou senha inválidos.</div>
+                <? endif; ?>
                 <form action="" method="post">
                     <div class="form-group">
                         <label for="ipt-login">Login</label>

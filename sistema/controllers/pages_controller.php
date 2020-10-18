@@ -1,7 +1,7 @@
 <?php
-class PagesController {
+class Pages extends Controller {
     public function error(){
-        require_once('views/error_view.php');
+        $this->view->render('error');
     }
 }
 ?>

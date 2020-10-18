@@ -30,6 +30,7 @@ class Bootstrap {
 			require $file;
 		} else {
 			$this->error();
+			exit;
 		}
 		
         $controller = new $url[0];
@@ -57,9 +58,9 @@ class Bootstrap {
 	}
 	
 	function error() {
-		require 'controllers/error.php';
-		// $controller = new Error();
-		// $controller->index();
+		require 'controllers/pages_controller.php';
+		$controller = new Pages();
+		$controller->error();
 		return false;
 	}
 }

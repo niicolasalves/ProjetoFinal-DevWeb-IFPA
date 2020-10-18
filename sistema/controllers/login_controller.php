@@ -14,6 +14,9 @@ class Login extends Controller {
                 Session::set('loggedIn', true);
 
                 header("Location: ./?u=pedidos");
+                exit;
+            } else {
+                $this->view->set('loginInvalido', true);
             }
         }
         $this->view->render('login', true);
